@@ -1,19 +1,19 @@
-def call(string repourl){
+def call(string repoUrl){
     pipeline {
        agent any
        stages {
-           stage("Tools initialization") {
+           stage("Tools Initialization") {
                steps {
                      sh 'java -version'
                }
            }
-           stage("Checkout Code") {
+           stage("Checkout code") {
                steps {
                    git branch: 'main',
                           url: "${repoUrl}"
                }
            }
-           stage("to-test-maven") {
+           stage("To-test-maven") {
                steps {
                    sh 'lsblk'
                }
